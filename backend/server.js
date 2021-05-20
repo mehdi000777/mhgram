@@ -27,12 +27,11 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb+srv://mehdi:ip6iE8y98dTSrTG
     useCreateIndex: true
 })
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'))
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-    })
-}
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/client/build')));
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/client/build/index.html'))
+);
 
 // Socket.io
 const http = createServer(app);
