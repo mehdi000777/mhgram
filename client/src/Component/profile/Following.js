@@ -13,15 +13,17 @@ export default function Following({ users, setShowFollowing }) {
             <div className="follow-box">
                 <h5 className="text-center">Following</h5>
                 <hr />
-                {
-                    users.map(user => (
-                        <UserCard key={user._id} user={user} setShowFollowing={setShowFollowing}>
-                            {
-                                userInfo._id !== user._id && <FollowBtn user={user} />
-                            }
-                        </UserCard>
-                    ))
-                }
+                <div className="follow_content">
+                    {
+                        users.map(user => (
+                            <UserCard key={user._id} user={user} setShowFollowing={setShowFollowing}>
+                                {
+                                    userInfo._id !== user._id && <FollowBtn user={user} />
+                                }
+                            </UserCard>
+                        ))
+                    }
+                </div>
                 <div className="close" onClick={() => setShowFollowing(false)}>
                     &times;
                 </div>

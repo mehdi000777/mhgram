@@ -55,7 +55,8 @@ export default function Menu() {
                         </span>
                         <span className="notify-length">{notifies.length}</span>
                     </span>
-                    <div className="dropdown-menu" aria-labelledby="narDavbropdown">
+                    <div className="dropdown-menu" aria-labelledby="narDavbropdown"
+                    style={{transform:"translateX(75px)"}}>
                         <NotifyModal />
                     </div>
                 </li>

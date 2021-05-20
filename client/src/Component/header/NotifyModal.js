@@ -29,7 +29,7 @@ export default function NotifyModal() {
     }
 
     return (
-        <div style={{ minWidth: "280px" }}>
+        <div style={{ minWidth: "300px" }}>
             <div className="d-flex justify-content-between align-items-center px-3">
                 <h3>Notifiction</h3>
                 {
