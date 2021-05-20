@@ -1,0 +1,33 @@
+.auth_page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth_page form {
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 2rem 1rem;
+}
+
+.auth_page .pass {
+    position: relative;
+}
+
+.auth_page .pass small {
+    position: absolute;
+    top: 50%;
+    right: .3rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.auth_page .gender{
+    display: flex;
+    justify-content: space-between;
+}

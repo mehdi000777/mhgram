@@ -1,0 +1,227 @@
+.message {
+    width: 100%;
+    height: calc(100vh - 100px);
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    border-radius: 3px;
+    background: #fbfbfb;
+}
+
+.message_header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background: #f8f8f8;
+    position: relative;
+}
+
+.message_header input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #f8f8f8;
+    padding: 0 5px;
+}
+
+.message_header .search{
+    display: none;
+}
+
+.message_header .close-search {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    color: red;
+}
+
+.massage_chat_list {
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+.massage_chat_list .message_user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #f3f3f3;
+    color: #555;
+    cursor: pointer;
+}
+
+.message_chat_list .message_user.active {
+    background: #eee;
+}
+
+.message_chat_list .message_user a {
+    color: #555;
+}
+
+.message_chat_list .message_user .fa-circle {
+    font-size: 8px;
+    color: #aaa;
+}
+
+.message_chat_list .message_user .fa-circle.active {
+    color: forestgreen;
+}
+
+.chat_input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat_input input {
+    width: 100%;
+    height: 49px;
+    border: none;
+    outline: none;
+}
+
+.chat_input button {
+    border: none;
+    outline: none;
+    background: #fff;
+}
+
+.chat_input .file_upload {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.chat_input .file_upload input[type="file"] {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.show_media {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-gap: 10px;
+    background: #f3f3f3;
+    place-items: center;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.show_media .file_media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.show_media .file_media img, .show_media .file_media video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.show_media .file_media span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid crimson;
+    border-radius: 50%;
+    padding: 3px 7px;
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.chat_container {
+    width: 100%;
+    height: calc(100% - 110px);
+    padding: 0 10px;
+    overflow-y: auto;
+}
+
+.chat_display {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat_row {
+    display: grid;
+    grid-template-columns: 70%;
+    margin-bottom: 10px;
+}
+
+.you_message {
+    justify-content: end;
+    justify-items: end;
+}
+
+.you_message .chat_text {
+    color: #fff;
+    background: #0048aa;
+    border: 1px solid #0048aa;
+    border-radius: 14px 14px 0 14px;
+}
+
+.other_message {
+    justify-content: start;
+    justify-items: start;
+}
+
+.other_message .chat_text {
+    color: #111;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 14px 14px 14px 0;
+}
+
+.chat_text {
+    padding: 9px 14px;
+    margin-bottom: 5px;
+}
+
+.chat_time {
+    font-size: 13px;
+    color: #777;
+}
+
+.you_content {
+    position: relative;
+}
+
+.you_content i {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+    font-size: 14px;
+}
+
+.you_content:hover i{
+    opacity: 1;
+}

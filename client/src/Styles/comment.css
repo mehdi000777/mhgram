@@ -1,0 +1,65 @@
+.comment-input {
+    display: flex;
+    align-items: center;
+}
+
+.comment-input input {
+    border: none;
+    background: #f7f7f7;
+    outline: none;
+    flex: 1;
+}
+
+.comment-input .postBtn {
+    background: #f7f7f7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: blue;
+    font-weight: 600;
+}
+
+.comment_display {
+    padding: 15px 25px;
+}
+
+.comment_card .comment_content {
+    background: #eee;
+    padding: 7px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment_card .comment_content .readMore {
+    color: crimson;
+    cursor: pointer;
+}
+
+.comment_card .comment_content .nav-item {
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+}
+
+.comment_card .comment_content:hover .nav-item {
+    opacity: 1;
+}
+
+.comment_card .comment_content .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: inherit;
+}
+
+.comment_card .comment_content .dropdown-item{
+    display: flex;
+    margin: 10px 0;
+}
+
+.comment_card .comment_content textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+}
